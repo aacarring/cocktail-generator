@@ -61,26 +61,26 @@ function generateDrink() {
                 ingredients.push(drinkInfo.strIngredient15);
             }
             
-            //make drink div, add contents
-            let generatedDrinkDiv = document.createElement('div');
-            generatedDrinkDiv.innerHTML = `
-            <h1>${drinkName}</h1>
-            <ul class="ingredients">
-               
-            </ul>
-            <p>${instructions}</p>
+            //add generated info to cocktailSection
+            cocktailSection.innerHTML = `
+            <h1 class="drinkName">${drinkName}</h1>
+            <p class="instructions">${instructions}</p>
             `;
 
+            //make ul, attach li
+            let ingredientsList = document.createElement('ul');
+            ingredientsList.classList.add("ingredients");
             for (let i = 0; i < ingredients.length; i++) {
-                generatedDrinkDiv.innerHTML += `<li>${ingredients[i]}</li>`;
+                ingredientsList.innerHTML += `<li>${ingredients[i]}</li>`;
             }
 
-            //append to section
-            cocktailSection.appendChild(generatedDrinkDiv);
+            //append ul and li to cocktailSection
+            cocktailSection.appendChild(ingredientsList);
 
         });
-    
-
 }
+
+//show random drink on page load
+generateDrink();
 
 generateDrinkBtn.addEventListener('click', generateDrink);

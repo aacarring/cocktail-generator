@@ -10,30 +10,75 @@ body {
     align-items: center;
     height: 100vh;
     width: 100vw;
+    background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
     header {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
+        min-width: 280px;
         width: 50vw;
         height: 20vh;
         text-align: center;
-        border: 2px solid black;
+        h1 {
+            font-family: 'Contrail One', cursive;
+            font-size: 2.25em;
+        }
+        span {
+            font-weight: normal;
+            font-size: 1.25em;
+            font-family: 'Source Sans Pro', sans-serif;
+        }
     }
     .cocktail {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        min-width: 300px;
         width: 50vw;
-        height: 30vh;
-        border: 2px solid black;
+        height: 50vh;
+        border-radius: 15px;
+        box-shadow: 2px 3px 15px grey;
+        .drinkName {
+            width: 90%;
+            align-self: center;
+            margin-left: 20px;
+            font-size: 2em;
+            font-weight: 500;
+            font-family: 'Contrail One', cursive;
+        }
+        .instructions {
+            width: 80%;
+            align-self: center;
+            margin-left: 20px;
+            overflow: scroll;
+            max-height: 15vh;
+            margin: 1vh 1vw;
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 1.1em;
+        }
+        .ingredients {
+            margin-left: 50px;
+            overflow: scroll;
+            max-height: 15vh;
+            li {
+                display: list-item;
+                font-family: 'Source Sans Pro', sans-serif;
+                font-size: 1em;
+                margin: 1vh auto;
+            }
+        }
     }
     button {
-        border: 2px solid black;
+        border: 2px solid grey;
         padding: 10px;
         border-radius: 15px;
         outline: none;
         &:hover {
             cursor: pointer;
+            border: 2px dotted grey;
         }
         span {
-            font-size: 4em;
+            font-size: 3em;
         }
     }
 }
