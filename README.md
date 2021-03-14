@@ -1,0 +1,1 @@
+A cocktail generator which provides a drink's name, instructions to make it, and ingredients with the click of a button, made with HTML, Sass, JavaScript, and the Cocktail DB API.
